@@ -34,8 +34,8 @@ function countdown() {
     // per convertire i secondi faccio la stessa cosa delle ore ma per quanti ms ci sono in un minuto
     const secondi = Math.floor((quantoManca % (1000 * 60)) / 1000);
   
-    // stampo in console il countdown
-    console.log( "GIORNI: " + giorni + ", ORE: " + ore + ", MINUTI: " + minuti + ", SECONDI: " + secondi)
+    // stampo in pagina il countdown
+    document.getElementById("timer").innerHTML = "Mancano esattamente: <br> " + giorni + " giorni <br>" + ore + " ore <br> " + minuti + " minuti <br> e " + secondi + " secondi a lunedì.";
 }
 
 // Aggiorna il countdown ogni secondo
