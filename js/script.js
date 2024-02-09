@@ -2,7 +2,7 @@
 // Ogni secondo il nostro countdown dovrà scalare fino alle 9:30 di lunedì mattina!
 
 // Funzione per aggiornare il countdown ogni secondo
-function Countdown() {
+function countdown() {
     const now = new Date();
     const monday = new Date();
     
@@ -22,7 +22,6 @@ function Countdown() {
   
     // Converto la differenza in giorni, ore, minuti e secondi
     // utilizzo Math.floor per arrotondare il numero per difetto
-
     // per convertire i giorni ho diviso la differenza per il numero di ms che ci sono in un giorno
     const giorni = Math.floor(quantoManca / (1000 * 60 * 60 * 24));
 
@@ -39,5 +38,8 @@ function Countdown() {
     console.log( "GIORNI: " + giorni + ", ORE: " + ore + ", MINUTI: " + minuti + ", SECONDI: " + secondi)
 }
 
+// Aggiorna il countdown ogni secondo
+const updateCountdown = setInterval(countdown, 1000);
+
 // eseguo la funzione
-Countdown();  
+countdown();  
