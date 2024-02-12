@@ -36,6 +36,12 @@ function countdown() {
   
     // stampo in pagina il countdown
     document.getElementById("timer").innerHTML = "Mancano esattamente: <br> " + giorni + " giorni <br>" + ore + " ore <br> " + minuti + " minuti <br> e " + secondi + " secondi a lunedì.";
+
+    // Se il countdown è terminato, mostra un messaggio
+    if (quantoManca <= 0) {
+        clearInterval(countdown);
+        document.getElementById('timer').innerHTML = "TIMER SCADUTO!!!!!!!";
+    }
 }
 
 // Aggiorna il countdown ogni secondo
